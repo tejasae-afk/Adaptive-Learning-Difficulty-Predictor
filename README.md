@@ -13,4 +13,83 @@ The project also looks at fairness by checking how predictions are distributed a
 
 An early warning model is also built using only early indicators like study time, absences, failures, and the first exam score. This allows the system to identify students who may need support before final exam results are available.
 
-Overall, this project shows how machine learning can be used to support early intervention and more personalized learning, instead of treating every student the same.
+📈 Results and Visualizations
+
+### Learning Difficulty Distribution
+This figure shows how students are distributed across Low, Medium, and High difficulty levels.
+![Learning Difficulty Distribution](images/LearningDifficulty_Distribution.png)
+
+### Class Distribution
+![Class Distribution](images/Class_Distribution.png)
+
+### Feature Importance (Random Forest)
+This plot highlights which features most influence the prediction.
+![Feature Importance](images/FeatureImportance.png)
+
+### Confusion Matrix
+This confusion matrix shows the model’s classification performance.
+![Confusion Matrix](images/ConfusionMatrix(RF).png)
+
+### Learning Curve
+![Learning Curve](images/Learning%20Curve(RF).png)
+
+📊 Dataset
+- Source: Kaggle – Student Performance Dataset  
+- Courses: Portuguese and Mathematics  
+- Total Records: 1,044 students  
+- Features include:
+  - Academic scores (G1, G2, G3)
+  - Study time, absences, failures
+  - Demographic and behavioral attributes
+
+⚙️ Feature Engineering
+To better represent student learning behavior, the following features were created:
+- **Learning Pace**: Average score relative to study time  
+- **Attendance Ratio**: Measure of class attendance consistency  
+- **Academic Consistency**: Variation across exam scores  
+
+These features help the model move beyond raw grades.
+
+🤖 Models Used
+- **Logistic Regression** – baseline and interpretable model  
+- **Random Forest** – final model used due to superior performance  
+
+Model Performance (Random Forest)
+- Accuracy: ~98%
+- Strong and balanced precision, recall, and F1-scores
+- Handles non-linear relationships effectively
+
+⚖️ Bias & Fairness Check
+Prediction distributions were analyzed across gender groups to check for potential bias. The results did not show significant disparities, indicating fair treatment across groups.
+
+🚨 Early Warning System
+An additional model was trained using only early academic indicators such as study time, absences, failures, and first exam score (G1). This allows early identification of students who may need academic support.
+
+🎯 Output
+For a given student, the system provides:
+- Predicted learning difficulty (Low / Medium / High)
+- Prediction confidence score
+- Recommended learning strategy:
+  - **Low**: Advanced content with self-paced learning
+  - **Medium**: Visual aids and regular practice sessions
+  - **High**: Simplified content and one-on-one support
+
+🛠️ Tools & Technologies
+- Python
+- NumPy, Pandas
+- Scikit-learn
+- Matplotlib, Seaborn
+- Google Colab
+
+🔮 Future Work
+- Incorporate formal fairness metrics
+- Extend predictions across multiple semesters
+- Deploy the model as a web-based dashboard for educators
+
+📁 Files
+- `Learning Difficulty Prediction.ipynb` – Complete implementation and analysis
+
+Team Members - 
+A. Tejas Attarde
+B. Yash Valsangkar
+C. Ehteshaam Siddiqui
