@@ -1,4 +1,4 @@
-# Adaptive-Learning-Difficulty-Predictor
+# Adaptive Learning Difficulty Predictor
 Students often struggle with one-size-fits-all education systems that ignore individual differences. This project proposes a machine learning–based adaptive learning system that predicts students’ learning difficulty levels and recommends personalized learning strategies.
 
 In many traditional education systems, students are taught in the same way, even though people learn very differently. Because of this, students who struggle are often noticed only after their performance drops a lot. The goal of this project is to deal with that problem by building a machine learning–based adaptive learning system that predicts a student’s learning difficulty and suggests learning strategies that fit their needs.
